@@ -1,0 +1,286 @@
+{
+	"info": {
+		"_postman_id": "cc94ffef-61b0-4c63-a632-c4eb9b7bb4b0",
+		"name": "test1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST",
+			"item": [
+				{
+					"name": "login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"token\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"apikey\": \"string\",\r\n  \"pin\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GET",
+			"item": [
+				{
+					"name": "GET artwork-statuses",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"Valid\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlrZXkiOiJzdHJpbmciLCJjb21tdW5pdHlfc3VwcG9ydGVkIjpmYWxzZSwiZXhwIjoxNjE2MDE2OTA0LCJpZCI6IjAiLCJpc19tb2QiOmZhbHNlLCJpc19zeXN0ZW1fa2V5IjpmYWxzZSwicGluIjoic3RyaW5nIn0.Uok2Zdozww1L8gIAy-SwFko9wIq7SIdXwUWrMvftaswX_v7kBo7l3VtHiYUDtsSrAAn-huObNm9OO87O2Y5ROYWugWUUXbeY_EnXAFIa1EkAONiQR8ulgfb0B2LJzF8gLpyqXArq3QI_S3azmyuiii4FJ1A6vZb_ppiz-Y00cBBU46k3BDSPYo099bzzM19cGBgZliOX74GOmrXdkQ19TFM4uPc5-Eu6_o_XqCfIfV1f_DiVPwdNqqAUfWB02lqA-xG9H2QTgytyRUq0S83XM8otql5EVhp6gC4svfHh8tsDA-g-IHeYXc64Sg9WTgo_noPG9bSqrb-tGkX0CrEL_AFLpadYc4eHeXg5SPZ6Ptb3LYT0_854oMITQWF10ZNQEfKn51niTM0mDu603cCqzmBu5hN-gIHxrL66vDCcwDj6eW6uXQQLdEa2EJZ30k7Y6r1aWslhOn2uNVU2gjWCdEcnKyuaWPV2nPRGwvXx81iZzcZ-vsAIVfJ71TBfiXZcknmlSEpFVV4rxiXVf20-3-iaLn3Dk0NYtp0o_X2X0-slr1h_fu6gbzHxiVsn6h0EtEyaD0uRJCujsNUEYdsfraDRjF8BkTHwFfZ2AsGUt0Obi16qEg9pMtLRrxDFIsMTE6I1hSXMVQJVF0GS68BZs8MNQnEprUJ4YIqGebfXRxg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/artwork-statuses",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"artwork-statuses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET updates",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"recordId\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlrZXkiOiJzdHJpbmciLCJjb21tdW5pdHlfc3VwcG9ydGVkIjpmYWxzZSwiZXhwIjoxNjE2MDE2OTA0LCJpZCI6IjAiLCJpc19tb2QiOmZhbHNlLCJpc19zeXN0ZW1fa2V5IjpmYWxzZSwicGluIjoic3RyaW5nIn0.Uok2Zdozww1L8gIAy-SwFko9wIq7SIdXwUWrMvftaswX_v7kBo7l3VtHiYUDtsSrAAn-huObNm9OO87O2Y5ROYWugWUUXbeY_EnXAFIa1EkAONiQR8ulgfb0B2LJzF8gLpyqXArq3QI_S3azmyuiii4FJ1A6vZb_ppiz-Y00cBBU46k3BDSPYo099bzzM19cGBgZliOX74GOmrXdkQ19TFM4uPc5-Eu6_o_XqCfIfV1f_DiVPwdNqqAUfWB02lqA-xG9H2QTgytyRUq0S83XM8otql5EVhp6gC4svfHh8tsDA-g-IHeYXc64Sg9WTgo_noPG9bSqrb-tGkX0CrEL_AFLpadYc4eHeXg5SPZ6Ptb3LYT0_854oMITQWF10ZNQEfKn51niTM0mDu603cCqzmBu5hN-gIHxrL66vDCcwDj6eW6uXQQLdEa2EJZ30k7Y6r1aWslhOn2uNVU2gjWCdEcnKyuaWPV2nPRGwvXx81iZzcZ-vsAIVfJ71TBfiXZcknmlSEpFVV4rxiXVf20-3-iaLn3Dk0NYtp0o_X2X0-slr1h_fu6gbzHxiVsn6h0EtEyaD0uRJCujsNUEYdsfraDRjF8BkTHwFfZ2AsGUt0Obi16qEg9pMtLRrxDFIsMTE6I1hSXMVQJVF0GS68BZs8MNQnEprUJ4YIqGebfXRxg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/updates?since=5",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"updates"
+							],
+							"query": [
+								{
+									"key": "since",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET translation",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"eng\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlrZXkiOiJzdHJpbmciLCJjb21tdW5pdHlfc3VwcG9ydGVkIjpmYWxzZSwiZXhwIjoxNjE2MDE2OTA0LCJpZCI6IjAiLCJpc19tb2QiOmZhbHNlLCJpc19zeXN0ZW1fa2V5IjpmYWxzZSwicGluIjoic3RyaW5nIn0.Uok2Zdozww1L8gIAy-SwFko9wIq7SIdXwUWrMvftaswX_v7kBo7l3VtHiYUDtsSrAAn-huObNm9OO87O2Y5ROYWugWUUXbeY_EnXAFIa1EkAONiQR8ulgfb0B2LJzF8gLpyqXArq3QI_S3azmyuiii4FJ1A6vZb_ppiz-Y00cBBU46k3BDSPYo099bzzM19cGBgZliOX74GOmrXdkQ19TFM4uPc5-Eu6_o_XqCfIfV1f_DiVPwdNqqAUfWB02lqA-xG9H2QTgytyRUq0S83XM8otql5EVhp6gC4svfHh8tsDA-g-IHeYXc64Sg9WTgo_noPG9bSqrb-tGkX0CrEL_AFLpadYc4eHeXg5SPZ6Ptb3LYT0_854oMITQWF10ZNQEfKn51niTM0mDu603cCqzmBu5hN-gIHxrL66vDCcwDj6eW6uXQQLdEa2EJZ30k7Y6r1aWslhOn2uNVU2gjWCdEcnKyuaWPV2nPRGwvXx81iZzcZ-vsAIVfJ71TBfiXZcknmlSEpFVV4rxiXVf20-3-iaLn3Dk0NYtp0o_X2X0-slr1h_fu6gbzHxiVsn6h0EtEyaD0uRJCujsNUEYdsfraDRjF8BkTHwFfZ2AsGUt0Obi16qEg9pMtLRrxDFIsMTE6I1hSXMVQJVF0GS68BZs8MNQnEprUJ4YIqGebfXRxg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/series/{{id}}/translations/{{Language}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"series",
+								"{{id}}",
+								"translations",
+								"{{Language}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET search",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"success\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlrZXkiOiJzdHJpbmciLCJjb21tdW5pdHlfc3VwcG9ydGVkIjpmYWxzZSwiZXhwIjoxNjE2MDE2OTA0LCJpZCI6IjAiLCJpc19tb2QiOmZhbHNlLCJpc19zeXN0ZW1fa2V5IjpmYWxzZSwicGluIjoic3RyaW5nIn0.Uok2Zdozww1L8gIAy-SwFko9wIq7SIdXwUWrMvftaswX_v7kBo7l3VtHiYUDtsSrAAn-huObNm9OO87O2Y5ROYWugWUUXbeY_EnXAFIa1EkAONiQR8ulgfb0B2LJzF8gLpyqXArq3QI_S3azmyuiii4FJ1A6vZb_ppiz-Y00cBBU46k3BDSPYo099bzzM19cGBgZliOX74GOmrXdkQ19TFM4uPc5-Eu6_o_XqCfIfV1f_DiVPwdNqqAUfWB02lqA-xG9H2QTgytyRUq0S83XM8otql5EVhp6gC4svfHh8tsDA-g-IHeYXc64Sg9WTgo_noPG9bSqrb-tGkX0CrEL_AFLpadYc4eHeXg5SPZ6Ptb3LYT0_854oMITQWF10ZNQEfKn51niTM0mDu603cCqzmBu5hN-gIHxrL66vDCcwDj6eW6uXQQLdEa2EJZ30k7Y6r1aWslhOn2uNVU2gjWCdEcnKyuaWPV2nPRGwvXx81iZzcZ-vsAIVfJ71TBfiXZcknmlSEpFVV4rxiXVf20-3-iaLn3Dk0NYtp0o_X2X0-slr1h_fu6gbzHxiVsn6h0EtEyaD0uRJCujsNUEYdsfraDRjF8BkTHwFfZ2AsGUt0Obi16qEg9pMtLRrxDFIsMTE6I1hSXMVQJVF0GS68BZs8MNQnEprUJ4YIqGebfXRxg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/search?year=2000&type=movie",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"search"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "2000"
+								},
+								{
+									"key": "type",
+									"value": "movie"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": ""
+		},
+		{
+			"key": "Language",
+			"value": "eng"
+		},
+		{
+			"key": "id",
+			"value": "70327"
+		}
+	]
+}
