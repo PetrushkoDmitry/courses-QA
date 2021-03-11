@@ -39,9 +39,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{url}}/login",
+							"raw": "{{base_url}}/login",
 							"host": [
-								"{{url}}"
+								"{{base_url}}"
 							],
 							"path": [
 								"login"
@@ -71,6 +71,15 @@
 								],
 								"type": "text/javascript"
 							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
 						}
 					],
 					"request": {
@@ -79,7 +88,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlrZXkiOiJzdHJpbmciLCJjb21tdW5pdHlfc3VwcG9ydGVkIjpmYWxzZSwiZXhwIjoxNjE2MDE2OTA0LCJpZCI6IjAiLCJpc19tb2QiOmZhbHNlLCJpc19zeXN0ZW1fa2V5IjpmYWxzZSwicGluIjoic3RyaW5nIn0.Uok2Zdozww1L8gIAy-SwFko9wIq7SIdXwUWrMvftaswX_v7kBo7l3VtHiYUDtsSrAAn-huObNm9OO87O2Y5ROYWugWUUXbeY_EnXAFIa1EkAONiQR8ulgfb0B2LJzF8gLpyqXArq3QI_S3azmyuiii4FJ1A6vZb_ppiz-Y00cBBU46k3BDSPYo099bzzM19cGBgZliOX74GOmrXdkQ19TFM4uPc5-Eu6_o_XqCfIfV1f_DiVPwdNqqAUfWB02lqA-xG9H2QTgytyRUq0S83XM8otql5EVhp6gC4svfHh8tsDA-g-IHeYXc64Sg9WTgo_noPG9bSqrb-tGkX0CrEL_AFLpadYc4eHeXg5SPZ6Ptb3LYT0_854oMITQWF10ZNQEfKn51niTM0mDu603cCqzmBu5hN-gIHxrL66vDCcwDj6eW6uXQQLdEa2EJZ30k7Y6r1aWslhOn2uNVU2gjWCdEcnKyuaWPV2nPRGwvXx81iZzcZ-vsAIVfJ71TBfiXZcknmlSEpFVV4rxiXVf20-3-iaLn3Dk0NYtp0o_X2X0-slr1h_fu6gbzHxiVsn6h0EtEyaD0uRJCujsNUEYdsfraDRjF8BkTHwFfZ2AsGUt0Obi16qEg9pMtLRrxDFIsMTE6I1hSXMVQJVF0GS68BZs8MNQnEprUJ4YIqGebfXRxg",
+									"value": "{{token}}",
 									"type": "string"
 								}
 							]
@@ -87,9 +96,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/artwork-statuses",
+							"raw": "{{base_url}}/artwork-statuses",
 							"host": [
-								"{{url}}"
+								"{{base_url}}"
 							],
 							"path": [
 								"artwork-statuses"
@@ -122,7 +131,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlrZXkiOiJzdHJpbmciLCJjb21tdW5pdHlfc3VwcG9ydGVkIjpmYWxzZSwiZXhwIjoxNjE2MDE2OTA0LCJpZCI6IjAiLCJpc19tb2QiOmZhbHNlLCJpc19zeXN0ZW1fa2V5IjpmYWxzZSwicGluIjoic3RyaW5nIn0.Uok2Zdozww1L8gIAy-SwFko9wIq7SIdXwUWrMvftaswX_v7kBo7l3VtHiYUDtsSrAAn-huObNm9OO87O2Y5ROYWugWUUXbeY_EnXAFIa1EkAONiQR8ulgfb0B2LJzF8gLpyqXArq3QI_S3azmyuiii4FJ1A6vZb_ppiz-Y00cBBU46k3BDSPYo099bzzM19cGBgZliOX74GOmrXdkQ19TFM4uPc5-Eu6_o_XqCfIfV1f_DiVPwdNqqAUfWB02lqA-xG9H2QTgytyRUq0S83XM8otql5EVhp6gC4svfHh8tsDA-g-IHeYXc64Sg9WTgo_noPG9bSqrb-tGkX0CrEL_AFLpadYc4eHeXg5SPZ6Ptb3LYT0_854oMITQWF10ZNQEfKn51niTM0mDu603cCqzmBu5hN-gIHxrL66vDCcwDj6eW6uXQQLdEa2EJZ30k7Y6r1aWslhOn2uNVU2gjWCdEcnKyuaWPV2nPRGwvXx81iZzcZ-vsAIVfJ71TBfiXZcknmlSEpFVV4rxiXVf20-3-iaLn3Dk0NYtp0o_X2X0-slr1h_fu6gbzHxiVsn6h0EtEyaD0uRJCujsNUEYdsfraDRjF8BkTHwFfZ2AsGUt0Obi16qEg9pMtLRrxDFIsMTE6I1hSXMVQJVF0GS68BZs8MNQnEprUJ4YIqGebfXRxg",
+									"value": "{{token}}",
 									"type": "string"
 								}
 							]
@@ -130,9 +139,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/updates?since=5",
+							"raw": "{{base_url}}/updates?since=5",
 							"host": [
-								"{{url}}"
+								"{{base_url}}"
 							],
 							"path": [
 								"updates"
@@ -171,7 +180,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlrZXkiOiJzdHJpbmciLCJjb21tdW5pdHlfc3VwcG9ydGVkIjpmYWxzZSwiZXhwIjoxNjE2MDE2OTA0LCJpZCI6IjAiLCJpc19tb2QiOmZhbHNlLCJpc19zeXN0ZW1fa2V5IjpmYWxzZSwicGluIjoic3RyaW5nIn0.Uok2Zdozww1L8gIAy-SwFko9wIq7SIdXwUWrMvftaswX_v7kBo7l3VtHiYUDtsSrAAn-huObNm9OO87O2Y5ROYWugWUUXbeY_EnXAFIa1EkAONiQR8ulgfb0B2LJzF8gLpyqXArq3QI_S3azmyuiii4FJ1A6vZb_ppiz-Y00cBBU46k3BDSPYo099bzzM19cGBgZliOX74GOmrXdkQ19TFM4uPc5-Eu6_o_XqCfIfV1f_DiVPwdNqqAUfWB02lqA-xG9H2QTgytyRUq0S83XM8otql5EVhp6gC4svfHh8tsDA-g-IHeYXc64Sg9WTgo_noPG9bSqrb-tGkX0CrEL_AFLpadYc4eHeXg5SPZ6Ptb3LYT0_854oMITQWF10ZNQEfKn51niTM0mDu603cCqzmBu5hN-gIHxrL66vDCcwDj6eW6uXQQLdEa2EJZ30k7Y6r1aWslhOn2uNVU2gjWCdEcnKyuaWPV2nPRGwvXx81iZzcZ-vsAIVfJ71TBfiXZcknmlSEpFVV4rxiXVf20-3-iaLn3Dk0NYtp0o_X2X0-slr1h_fu6gbzHxiVsn6h0EtEyaD0uRJCujsNUEYdsfraDRjF8BkTHwFfZ2AsGUt0Obi16qEg9pMtLRrxDFIsMTE6I1hSXMVQJVF0GS68BZs8MNQnEprUJ4YIqGebfXRxg",
+									"value": "{{token}}",
 									"type": "string"
 								}
 							]
@@ -179,15 +188,15 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/series/{{id}}/translations/{{Language}}",
+							"raw": "{{base_url}}/series/{{id}}/translations/{{language}}",
 							"host": [
-								"{{url}}"
+								"{{base_url}}"
 							],
 							"path": [
 								"series",
 								"{{id}}",
 								"translations",
-								"{{Language}}"
+								"{{language}}"
 							]
 						}
 					},
@@ -217,7 +226,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlrZXkiOiJzdHJpbmciLCJjb21tdW5pdHlfc3VwcG9ydGVkIjpmYWxzZSwiZXhwIjoxNjE2MDE2OTA0LCJpZCI6IjAiLCJpc19tb2QiOmZhbHNlLCJpc19zeXN0ZW1fa2V5IjpmYWxzZSwicGluIjoic3RyaW5nIn0.Uok2Zdozww1L8gIAy-SwFko9wIq7SIdXwUWrMvftaswX_v7kBo7l3VtHiYUDtsSrAAn-huObNm9OO87O2Y5ROYWugWUUXbeY_EnXAFIa1EkAONiQR8ulgfb0B2LJzF8gLpyqXArq3QI_S3azmyuiii4FJ1A6vZb_ppiz-Y00cBBU46k3BDSPYo099bzzM19cGBgZliOX74GOmrXdkQ19TFM4uPc5-Eu6_o_XqCfIfV1f_DiVPwdNqqAUfWB02lqA-xG9H2QTgytyRUq0S83XM8otql5EVhp6gC4svfHh8tsDA-g-IHeYXc64Sg9WTgo_noPG9bSqrb-tGkX0CrEL_AFLpadYc4eHeXg5SPZ6Ptb3LYT0_854oMITQWF10ZNQEfKn51niTM0mDu603cCqzmBu5hN-gIHxrL66vDCcwDj6eW6uXQQLdEa2EJZ30k7Y6r1aWslhOn2uNVU2gjWCdEcnKyuaWPV2nPRGwvXx81iZzcZ-vsAIVfJ71TBfiXZcknmlSEpFVV4rxiXVf20-3-iaLn3Dk0NYtp0o_X2X0-slr1h_fu6gbzHxiVsn6h0EtEyaD0uRJCujsNUEYdsfraDRjF8BkTHwFfZ2AsGUt0Obi16qEg9pMtLRrxDFIsMTE6I1hSXMVQJVF0GS68BZs8MNQnEprUJ4YIqGebfXRxg",
+									"value": "{{token}}",
 									"type": "string"
 								}
 							]
@@ -225,9 +234,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/search?year=2000&type=movie",
+							"raw": "{{base_url}}/search?year=2000&type=movie",
 							"host": [
-								"{{url}}"
+								"{{base_url}}"
 							],
 							"path": [
 								"search"
@@ -245,6 +254,46 @@
 						}
 					},
 					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.sendRequest({",
+							"    url: 'https://api4.thetvdb.com/v4/login',",
+							"    method: 'POST',",
+							"    header: {",
+							"        'content-type': 'application/json'",
+							"    },",
+							"    body: {",
+							"        mode: 'raw',",
+							"        raw: JSON.stringify({    })",
+							"    }",
+							"}, (err, res) => pm.collectionVariables.set(\"token\", res.json().accessToken));"
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
 				}
 			]
 		}
@@ -267,20 +316,6 @@
 					""
 				]
 			}
-		}
-	],
-	"variable": [
-		{
-			"key": "url",
-			"value": ""
-		},
-		{
-			"key": "Language",
-			"value": "eng"
-		},
-		{
-			"key": "id",
-			"value": "70327"
 		}
 	]
 }
